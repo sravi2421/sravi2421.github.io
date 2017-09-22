@@ -43,11 +43,10 @@ After extracting subtopics, I was curious to see how the Times modified their de
 
 ***President, 1981-1984(Reagan)***
 
-<img src="https://github.com/sravi2421/sravi2421.github.io/raw/master/images/reagan_1981_1984.png" alt="Drawing" style="width: 50px;"/>
+<img src="https://github.com/sravi2421/sravi2421.github.io/raw/master/images/reagan_1981_1984.png" alt="Drawing" style="width: 150px;"/>
 
 ***President, 2009-2012(Obama)***
-![test](https://github.com/sravi2421/sravi2421.github.io/raw/master/images/president_2009_2012.png)
-
+<img src="https://github.com/sravi2421/sravi2421.github.io/raw/master/images/president_2009_2012.png" alt="Drawing" style="width: 150px;"/>
 
 ***Moscow, 1981-1984***
 ![test](https://github.com/sravi2421/sravi2421.github.io/raw/master/images/moscow_1981_1984.png) <!-- .element height="50%" width="50%" -->
