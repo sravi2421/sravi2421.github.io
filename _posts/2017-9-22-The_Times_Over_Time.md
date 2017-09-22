@@ -49,7 +49,7 @@ After extracting subtopics, I was curious to see how the Times modified their de
 
 
 ***Moscow, 1981-1984***
-![test](https://github.com/sravi2421/sravi2421.github.io/raw/master/images/moscow_1981_1984.png =100x20)
+![test](https://github.com/sravi2421/sravi2421.github.io/raw/master/images/moscow_1981_1984.png) <!-- .element height="50%" width="50%" -->
 
 ***Moscow, 2013-2016***
 ![test](https://github.com/sravi2421/sravi2421.github.io/raw/master/images/moscow_2013_2016.png)
