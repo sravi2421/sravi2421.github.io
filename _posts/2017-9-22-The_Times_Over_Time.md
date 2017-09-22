@@ -42,7 +42,8 @@ When going through the business subtopics, I quickly realized that the ocean of 
 After extracting subtopics, I was curious to see how the Times modified their description of key topics throughout time. To examine word descriptions I used Word2Vec, a model used to extract Word Embeddings from corpuses of text.  Since I wanted to specifically look at descriptors, I went through and tagged each adjective or adverb within my body of text using a part of speech tagger prior to creating my Word2Vec models.  With this done, I created three separate Word2Vec Models on the subtopics of the Middle East and Domestic Affairs.  Using those I extracted the primary words associated with Moscow, for the Middle East corpus and President for the Domestic Affairs corpus as shown below.
 
 ***President, 1981-1984(Reagan)***
-![test](https://github.com/sravi2421/sravi2421.github.io/raw/master/images/reagan_1981_1984.png)
+
+<img src="https://github.com/sravi2421/sravi2421.github.io/raw/master/images/reagan_1981_1984.png" alt="Drawing" style="width: 200px;"/>
 
 ***President, 2009-2012(Obama)***
 ![test](https://github.com/sravi2421/sravi2421.github.io/raw/master/images/president_2009_2012.png)
