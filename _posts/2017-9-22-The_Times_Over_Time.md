@@ -11,7 +11,7 @@ With these set of events as inspiration, I set out to look at the NYTimes articl
 
 **The Data**
 
-Using the New York Times API I was able to get a hold of a summary of all articles by the New York Times for any given year. The API returned only the leading paragraph, headline, and snippet from each article, but also provided a url.  Using the URL's provided and scrapy I scraped all front page news articles. The decision to pull only front page articles was made to capture what on the front of people's minds throughout each time period as opposed to an exhaustive list.  With this in place I now had the full text of just over 300,000 front page articles published from 1981 through 2016.
+Using the New York Times API I was able to get a hold of a summary of all articles by the New York Times for any given year. The API returned only the leading paragraph, headline, and snippet from each article, but also provided a url.  Using the URL's provided and scrapy I scraped all front page news articles. The decision to pull only front page articles was made to capture what on the front of people's minds throughout each time period as opposed to an exhaustive list.  With this in place I now had the full text of approximately 300,000 front page articles published between 1981 and 2016.
 
 **Topic Modeling**
 
@@ -33,13 +33,27 @@ Lastly with this crazy election that we just had I looked specifically at the Pr
 
 **Subtopics - Business**
 
-When going through the business subtopics, I quickly realized that the ocean of topics in the corporate world was larger than what I had seen in Politics and after trying a few different models, I found that specifying eight topics extracted the best results. Topics which were extremely prevalent throughout the entire analysis was included 'Corporate' which was a pretty broad category centered around corporate earnings of all types of corporations, after that, economic indicators, oil, stocks and banking were pretty prevalent throughout the entire analysis.  The only industries which were extracted as their own subtopic were the Tech, Motor, Healthcare and Retail industries.  The Motor Industry was a topic throughout the analysis with Technology only becoming prevalent in the early 1990s.  Healthcare and Retail were less prevalent throughout the analysis and were only subtopics between 2005 and 2016.
+When going through the business subtopics, I quickly realized that the ocean of topics in the corporate world was larger than what I had seen in Politics and after trying a few different models, I found that specifying eight topics extracted the best results. Topics which were extremely prevalent throughout the entire analysis included 'Corporate' which was a pretty broad category centered around corporate earnings of all types of corporations, after that, economic indicators, oil, stocks and banking were pretty prevalent throughout the entire analysis.  The only industries which were extracted as their own subtopic were the Tech, Motor, Healthcare and Retail industries.  The Motor Industry was a topic throughout the analysis with Technology only becoming prevalent in the early 1990s.  Healthcare and Retail were less prevalent throughout the analysis and were only subtopics between 2005 and 2016.
 
 ![test](https://github.com/sravi2421/sravi2421.github.io/raw/master/images/Article_counts_over_time_business.png)
 
 **Word2Vec Sentiment Analysis**
 
 After extracting subtopics, I was curious to see how the Times modified their description of key topics throughout time. To examine word descriptions I used Word2Vec, a model used to extract Word Embeddings from corpuses of text.  Since I wanted to specifically look at descriptors, I went through and tagged each adjective or adverb within my body of text using a part of speech tagger prior to creating my Word2Vec models.  With this done, I created three separate Word2Vec Models on the subtopics of the Middle East and Domestic Affairs.  Using those I extracted the primary words associated with Moscow, for the Middle East corpus and President for the Domestic Affairs corpus as shown below.
+
+***President, 1981-1984(Reagan)***
+![test](https://github.com/sravi2421/sravi2421.github.io/raw/master/images/reagan_1981_1984.png)
+
+***President, 2009-2012(Obama)***
+![test](https://github.com/sravi2421/sravi2421.github.io/raw/master/images/president_2009_2012.png)
+
+
+***Moscow, 1981-1984***
+![test](https://github.com/sravi2421/sravi2421.github.io/raw/master/images/moscow_1981_1984.png)
+
+***Moscow, 2013-2016***
+![test](https://github.com/sravi2421/sravi2421.github.io/raw/master/images/moscow_2013_2016.png)
+
 
 
 
