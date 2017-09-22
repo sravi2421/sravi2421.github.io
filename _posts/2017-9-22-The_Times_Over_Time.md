@@ -43,7 +43,7 @@ After extracting subtopics, I was curious to see how the Times modified their de
 
 ***President, 1981-1984(Reagan)***
 
-<img src="https://github.com/sravi2421/sravi2421.github.io/raw/master/images/reagan_1981_1984.png" alt="Drawing" style="width: 200px;"/>
+<img src="https://github.com/sravi2421/sravi2421.github.io/raw/master/images/reagan_1981_1984.png" alt="Drawing" style="width: 50px;"/>
 
 ***President, 2009-2012(Obama)***
 ![test](https://github.com/sravi2421/sravi2421.github.io/raw/master/images/president_2009_2012.png)
