@@ -1,0 +1,178 @@
+<html>
+<head>
+    <title>A D3 map</title>
+    <script src="http://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="data/manhattan_neighbs.json"></script>
+    <script src="data/neighb_densities.json"></script>
+    <style>
+        body {
+            position: absolute;
+            font-family: "Proxima Nova", "Montserrat", sans-serif;
+        }
+        h1, h2 {
+            position: absolute;
+            left: 10px;
+            font-size: 1.3em;
+            font-weight: 100;
+        }
+        h2 {
+            top: 30px;
+            font-size: 1em;
+        }
+        .hover {
+            fill: yellow;   
+        }
+        #sliderContainer {
+            text-align: center;
+            position: relative;
+            top: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div id="sliderContainer">
+        <input id="timeslide" type="range" min="0" max="23" value="0" step="1"/><br>
+        <span id="range">00:00</span>
+    </div>
+    <div id="sliderContainer">
+        <input id="dayslide" type="range" min="0" max="6" value="0" step="1"/><br>
+        <span id="range2">Monday</span>
+    </div>
+
+    <script>
+    var input_time = null;
+    var input_day = null;
+    var time = ["00:00","01:00","02:00","03:00",'04:00','05:00','06:00','07:00','08:00','09:00','10:00','11:00','12:00','13:00', '14:00','15:00','16:00','17:00','18:00','19:00','20:00','21:00','22:00','23:00'];
+    var day = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+    var color = d3.scaleThreshold()
+    .domain(d3.range(2, 10))
+    .range(d3.schemeRdYlBu[9]);
+
+    var width = 1400;
+    var height = 780;
+
+    var svg = d3.select( "body" )
+        .append( "svg" )
+        .attr( "width", width )
+        .attr( "height", height );
+
+    var g = svg.append( "g" );
+
+    var albersProjection = d3.geoAlbers()
+        .scale( 240000 )
+        .rotate( [74.0059,0] )
+        .center( [0, 40.7128] )
+        .translate( [width/2,height/2] );
+
+    var geoPath = d3.geoPath()
+        .projection( albersProjection );
+
+    g.selectAll( "path" )
+        .data( neighborhoods_json.features )
+        .enter()
+        .append( "path" )
+        .attr( "fill", initialTime)
+        .attr( "stroke", "#333")
+        .attr( "d", geoPath );
+
+    // when the input range changes update the value 
+    d3.select("#timeslide").on("input", function() {
+        update_time(+this.value);
+    });
+
+    d3.select("#dayslide").on("input", function() {
+        update_day(+this.value);
+    });
+
+    
+    // update the fill of each SVG of class "incident" with value
+    function update_time(value) {
+
+        document.getElementById("range").innerHTML=time[value];
+        input_time = time[value];
+        d3.selectAll("path")
+            .attr("fill", dateMatch);
+    }
+
+    function update_day(value) {
+
+        document.getElementById("range2").innerHTML=day[value];
+        input_day = day[value];
+        d3.selectAll("path")
+            .attr("fill", dateMatch);
+    }
+
+    // cycle through all jsons in linked file, and populate all neighborhoods with 
+    // corresponding cikir
+    function dateMatch(data, value) {
+        //first cycle through all neighborhoods on a given day, set min and max
+        var locationId = data.properties.LocationID;
+        var neighbsObj = neighb_densities.features;
+        densities = []
+        for (var i = 0;i < neighbsObj.length ; i++){
+            if(neighbsObj[i].time == input_time && neighbsObj[i].day == input_day){
+                densities.push(neighbsObj[i].density);
+            }
+        }
+        max_dens = Math.max.apply(null, densities);
+        min_dens = Math.min.apply(null, densities);
+
+        // function which returns the corresponding 'bin', which the particular neighborhood is currently in
+        
+        var x = d3.scaleLinear()
+        .domain([min_dens, max_dens])
+        .rangeRound([10, 1]);
+
+
+        for (var i = 0; i < neighbsObj.length ; i++) {
+            //console.log(neighbsObj[i].time);
+             //console.log(neighbsObj[i].ID);
+             if(neighbsObj[i].ID == locationId && neighbsObj[i].time == input_time && neighbsObj[i].day == input_day){
+                var locationDensity = neighbsObj[i].density;
+                //console.log(locationDensity);
+                return color(x(locationDensity));
+             }
+        }
+    }
+
+    function initialTime(d,i){
+        input_day = "Monday"
+        input_time = "00:00"
+       // console.log(d.properties.LocationID);
+        var locationId = d.properties.LocationID;
+       // console.log(neighb_densities.features);
+
+        var neighbsObj = neighb_densities.features;
+        
+        densities = []
+        for (var i = 0;i < neighbsObj.length ; i++){
+            if(neighbsObj[i].time == "00:00"&& neighbsObj[i].day =="Monday"){
+                console.log('condition fulfilled');
+                densities.push(neighbsObj[i].density);
+            }
+        }
+
+        max_dens = Math.max.apply(null, densities);
+        min_dens = Math.min.apply(null, densities);
+        // console.log(densities);
+        var x = d3.scaleLinear()
+        .domain([min_dens, max_dens])
+        .rangeRound([10, 1]);
+
+        for (var i = 0; i < neighbsObj.length ; i++) {
+            //console.log(neighbsObj[i].time);
+             //console.log(neighbsObj[i].ID);
+             if(neighbsObj[i].ID == locationId && neighbsObj[i].time == "00:00"&& neighbsObj[i].day =="Monday"){
+                var locationDensity = neighbsObj[i].density;
+                //console.log(locationDensity);
+                return color(x(locationDensity))
+             }
+        };
+    }
+
+
+    </script>
+</body>
+</html>
