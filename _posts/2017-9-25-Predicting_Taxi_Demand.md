@@ -48,13 +48,13 @@ Other large residuals had components which the model would have no way of detect
 Visualizing Demand Shifts
 With a fairly accurate model, I wanted to put together a generalizable tool for cab drivers to use to guide their routing throughout shifts. 
 
-<script src="https://gist.github.com/sravi2421/raw/aba4b211fcbaea98b2af437e19bb5e72/"></script>
-
+<iframe width="560" height="420" src="http://www.youtube.com/embed/6ByyepnhOiI?color=white&theme=light"></iframe>
 
 Lastly, for a more pinpointed look at demand, you can see here where the majority of pickups were in the specific time intervals listed below.
 
 
-Further Work
+** Further Work**
+
 I think the tool I presented here is a good starting point for yellow cab drivers as they compete with their new competitors who are much more data savvy and are better connected with their customers. While the toolset I have presented here gives cab drivers a good sense of where yellow-cabs are being hailed, it has no insight on which parts of the city are underserved. Unfortunately, this is one area in which Uber and Lyft's business model gives them much better insight in to how to best serve their customers. They have access to a much richer dataset which allows them to direct their fleet in a synchronized manner. One way to try and better understand this issue is to look at the introduction of green cabs and examine which neighborhoods benefitted the most from their launch.
 
 Additionally, while the current model gives drivers a rough estimate of which neighborhoods they should head to, I think I could further optimize this problem by splitting the city up into avenues which could provide taxi-drivers more targetted demand estimates. 
