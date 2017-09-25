@@ -48,7 +48,7 @@ Other large residuals had components which the model would have no way of detect
 Visualizing Demand Shifts
 With a fairly accurate model, I wanted to put together a generalizable tool for cab drivers to use to guide their routing throughout shifts. 
 
-{% gist aba4b211fcbaea98b2af437e19bb5e72 %}
+<script src="https://gist.github.com/sravi2421/raw/aba4b211fcbaea98b2af437e19bb5e72/"></script>
 
 
 Lastly, for a more pinpointed look at demand, you can see here where the majority of pickups were in the specific time intervals listed below.
