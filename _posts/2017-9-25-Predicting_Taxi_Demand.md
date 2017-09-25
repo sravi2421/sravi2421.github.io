@@ -46,11 +46,11 @@ Other large residuals had components which the model would have no way of detect
 
 
 Visualizing Demand Shifts
-With a fairly accurate model, I wanted to put together a generalizable tool for cab drivers to use to guide their routing throughout shifts. 
+With a fairly accurate model, I wanted to put together a generalizable tool for cab drivers to use to guide their routing throughout shifts. Below is a brief video showing the capabilities of the demand prediction engine.  If you would like to toggle with it yourself, you can reach the interactive visualization through the following link: [D3 Visualization].
+[D3 Visualization]: http://bl.ocks.org/sravi2421/raw/aba4b211fcbaea98b2af437e19bb5e72/
+
 
 {% include youtubePlayer.html%}
-
-''testing
 
 Lastly, for a more pinpointed look at demand, you can see here where the majority of pickups were in the specific time intervals listed below.
 
