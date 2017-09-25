@@ -25,7 +25,7 @@ When modeling demand I focused my attention on the high volume pick up areas wit
 
 In total, my dataset included 455,460 observations.  Given that most of the variables included within my dataset were categorical I one hot encoded each of these variables. Also given the concentration of categorical variables, a random forest seemed to be the logical choice for my model and after fitting a Random Forest Model to the data, the model performed fairly well, achieving an R^2 of .94.  The features which provided the most predictive power included neighborhood, time of day, and neighborhood type. The two most important features on an individual basis were: Penn Station/MSG and Commercial 2(indicating that a neighborhood had a high density office space). Below is a graph of total feature importance. Keep in mind that each of these features shown below are a summation of each specific category within each variable, many of which are extremely unbalanced. 
 
-![test](https://github.com/sravi2421/sravi2421.github.io/raw/master/images/feature_importances_categorical.png)
+![test](https://github.com/sravi2421/sravi2421.github.io/raw/master/images/Feature_importances_categorical.png)
 
 More specifically, you can see here the rankings of individual features.  Interestingly, the two most important features are associated with regions of the city which experience extremely high levels of yellow-cab demand, while the next several indicate times of the day/week when you would expect demand to be decreased.  Surprisingly, weather conditions had very little effect on taxi demand.
 
@@ -47,6 +47,8 @@ Other large residuals had components which the model would have no way of detect
 
 Visualizing Demand Shifts
 With a fairly accurate model, I wanted to put together a generalizable tool for cab drivers to use to guide their routing throughout shifts. 
+
+{% gist aba4b211fcbaea98b2af437e19bb5e72 %}
 
 
 Lastly, for a more pinpointed look at demand, you can see here where the majority of pickups were in the specific time intervals listed below.
