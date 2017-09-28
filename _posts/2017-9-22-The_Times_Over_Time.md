@@ -43,16 +43,20 @@ After extracting subtopics, I was curious to see how the Times modified their de
 
 ***President, 1981-1984(Reagan)***
 
-<img src="https://github.com/sravi2421/sravi2421.github.io/raw/master/images/reagan_1981_1984.png" alt="Drawing" style="width: 450px;"/>
+<img src="https://github.com/sravi2421/sravi2421.github.io/raw/master/images/reagan_1981_1984.png" alt="Drawing" style="width: 350px;"/>
 
 ***President, 2009-2012(Obama)***
 
-<img src="https://github.com/sravi2421/sravi2421.github.io/raw/master/images/president_2009_2012.png" alt="Drawing" style="width: 450px;"/>
+<img src="https://github.com/sravi2421/sravi2421.github.io/raw/master/images/president_2009_2012.png" alt="Drawing" style="width: 350px;"/>
+
+These are two interesting characterizations of the President at different times during the history of our country. You can see that both presidents were described in positive terms and were seen as unifying.  But when looking at a few of the medium sized words (size is in direct relation to frequency), you can see that Reagan was characterized as a plain spoken politician who was relatable, with descriptors such as 'mainstream', 'bluntly', and 'plainly'.  Whereas Obama was seen in a more timid intellectual fashion, with descriptors such as 'philosophical', 'nervous', 'polite', and 'conciliatory'.  Interestingly both of them were described with both positive and negative descriptors. For Reagan these descriptors included 'futile' and 'combative' whereas for Obama, these words included 'negative'and 'forcefully'
 
 ***Moscow, 1981-1984***
 
-<img src="https://github.com/sravi2421/sravi2421.github.io/raw/master/images/moscow_1981_1984.png" alt="Drawing" style="width: 450px;"/>
+<img src="https://github.com/sravi2421/sravi2421.github.io/raw/master/images/moscow_1981_1984.png" alt="Drawing" style="width: 350px;"/>
 
 ***Moscow, 2013-2016***
 
-<img src="https://github.com/sravi2421/sravi2421.github.io/raw/master/images/moscow_2013_2016.png" alt="Drawing" style="width: 450px;"/>
+<img src="https://github.com/sravi2421/sravi2421.github.io/raw/master/images/moscow_2013_2016.png" alt="Drawing" style="width: 350px;"/>
+
+Interestingly, for Moscow, the descriptors used during the early 1980s are less emotionally charged than those from 2013 through 2016, despite the fact that the United States was engaged in the cold war at that time.  For example, several of the top descriptors during the cold war period include 'openly', 'likely', 'cool' and 'deeply'.  Whereas from 2013 to 2016, the largest words include 'brokered', 'intrusive', and 'abrupt'.
