@@ -31,7 +31,11 @@ More specifically, you can see here the rankings of individual features.  Intere
 
 ![test](https://github.com/sravi2421/sravi2421.github.io/raw/master/images/feature_importances_all.png)
 
-Lastly, when looking at the model's residuals, you see that many of the higher residuals are occuring in the Penn Station Neighborhood.  Upon further investigation, I found that many of the under-predictions were coinciding with large scale events occuring at Madison Square Garden.
+Lastly, when looking at the model's residuals, you see that many of the higher residuals are occuring in the Penn Station Neighborhood.  
+
+![test](https://github.com/sravi2421/sravi2421.github.io/raw/master/images/residuals_taxis.png)
+
+Upon further investigation, I found that many of the under-predictions were coinciding with large scale events occuring at Madison Square Garden.
 
 -  11/25/2015: Stevie Wonder
 -  05/01/2016: Pearl Jam
